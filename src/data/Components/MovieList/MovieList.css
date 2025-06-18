@@ -1,0 +1,78 @@
+.movie-list {
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  gap:10px;
+  padding-top:10px;
+  z-index: 1;
+  position: relative;
+}
+
+.background {
+  background-color: black;
+}
+.empty {
+  color:white;
+  height: 550px;
+}
+
+.beam {
+  position: fixed;
+  bottom: -20vh;
+  width: 100px;
+  height: 120vh;
+  background: linear-gradient(to top, rgba(255,255,255,0), white, rgba(255,255,255,0));
+  opacity: 0.4;
+  transform-origin: center bottom;
+  animation: wander 6s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.beam-left {
+  left: 0%;
+  animation-name: wander-left;
+}
+
+.beam-right {
+  left: 100%;
+  animation-name: wander-right;
+}
+
+@keyframes wander {
+  0% {
+    transform: translateX(0) rotate(-45deg);
+  }
+  20% {
+    transform: translateX(200px) rotate(-10deg);
+  }
+  40% {
+    transform: translateX(500px) rotate(30deg);
+  }
+  60% {
+    transform: translateX(200px) rotate(-5deg);
+  }
+  80% {
+    transform: translateX(0px) rotate(-30deg);
+  }
+  100% {
+    transform: translateX(0) rotate(-45deg);
+  }
+}
+@keyframes wander-left {
+  0%, 100% {
+    transform: translateX(0) rotate(-45deg);
+  }
+  50% {
+    transform: translateX(500px) rotate(45deg); 
+  }
+}
+
+@keyframes wander-right {
+  0%, 100% {
+    transform: translateX(0) rotate(45deg);
+  }
+  50% {
+    transform: translateX(-500px) rotate(-45deg);
+  }
+}

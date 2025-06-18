@@ -1,8 +1,10 @@
+/* .app was starter code */
 .App {
   text-align: center;
+  font-family: 'Quicksand', sans-serif;
 }
-
-.App-header {
+/* everything below this is starter code */
+/* .App-header {
   background-color: #282c34;
   display: flex;
   flex-direction: row;
@@ -25,4 +27,4 @@
   .search-bar form {
     flex-direction: column;
   }
-}
+} */
